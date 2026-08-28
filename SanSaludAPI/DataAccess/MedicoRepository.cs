@@ -31,5 +31,15 @@ namespace SanSaludAPI.DataAccess
             await _context.SaveChangesAsync();
             return medico;
         }
+
+        public async Task DeleteAsync(Guid id)
+        {
+            var medico = await _context.Medicos.FindAsync(id);
+            if (medico != null)
+            {
+                _context.Medicos.Remove(medico);
+                await _context.SaveChangesAsync();
+            }
+        }
     }
 }

@@ -41,5 +41,12 @@ namespace SanSaludAPI.API
             var medico = await medicoService.CreateMedicoAsync(medicoDto);
             return CreatedAtAction(nameof(GetMedico), new { id = medico.Id }, medico);
         }
+
+        [HttpDelete("{id}")]
+        public async Task<ActionResult> DeleteMedico(Guid id)
+        {
+            await medicoService.DeleteMedicoAsync(id);
+            return NoContent();
+        }
     }
 }

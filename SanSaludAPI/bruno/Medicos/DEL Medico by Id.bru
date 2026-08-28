@@ -1,0 +1,15 @@
+meta {
+  name: DEL Medico by Id
+  type: http
+  seq: 4
+}
+
+delete {
+  url: http://127.0.0.1:5175/api/Medicos/33333333-3333-3333-3333-333333333333
+  body: none
+  auth: none
+}
+
+vars:pre-request {
+  medicoId: 5bc0e17d-6792-4c09-af0a-f0eab9521aa8
+}

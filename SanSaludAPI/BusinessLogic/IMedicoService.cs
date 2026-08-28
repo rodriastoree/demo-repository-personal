@@ -11,5 +11,6 @@ namespace SanSaludAPI.BusinessLogic
         Task<IEnumerable<MedicoResponseDTO>> GetAllMedicosAsync();
         Task<MedicoResponseDTO?> GetMedicoByIdAsync(Guid id);
         Task<MedicoResponseDTO> CreateMedicoAsync(MedicoCreateDTO medicoDto);
+        Task DeleteMedicoAsync(Guid id);
     }
 }

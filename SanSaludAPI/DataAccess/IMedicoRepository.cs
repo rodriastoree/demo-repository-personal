@@ -9,5 +9,6 @@ namespace SanSaludAPI.DataAccess
         Task<IEnumerable<Medico>> GetAllAsync();
         Task<Medico?> GetByIdAsync(Guid id);
         Task<Medico> CreateAsync(Medico medico);
+        Task DeleteAsync(Guid id);
     }
 }

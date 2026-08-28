@@ -61,5 +61,10 @@ namespace SanSaludAPI.BusinessLogic
                 Matricula = createdMedico.Matricula
             };
         }
+
+        public async Task DeleteMedicoAsync(Guid id)
+        {
+            await _medicoRepository.DeleteAsync(id);
+        }
     }
 }
